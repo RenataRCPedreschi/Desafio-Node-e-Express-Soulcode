@@ -1,3 +1,4 @@
+const fs = require('fs');
 const alunos = [
   { nome: "José Almir", media: 9 },
   { nome: "Gabriel Braga", media: 9 },
@@ -15,7 +16,7 @@ const alunos = [
 //o includes determina se o array tem ou não o elemento passado, retornando true or false.
 // O toLowerCase não fará distinção entre maísculas e minúsculas, ou seja, independente da forma que for digitado, ele irá retornar o nome solicitado.
 function filtrarNomeAluno(nome) {
-  return alunos.filter((aluno) =>
+  alunos.filter((aluno) =>
     aluno.nome.toLowerCase().includes(nome.toLowerCase())
   );
 }
@@ -25,3 +26,5 @@ function filtrarMediaAluno(media){
 }
 
 module.exports = alunos, filtrarNomeAluno, filtrarMediaAluno;
+
+
